@@ -1,0 +1,10 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" *ngIf="page !== 1" (click)="changePageMinus()">
+      <a class="page-link">anterior</a>
+    </li>
+    <li class="page-item" (click)="changePagePlus()">
+      <a class="page-link">siguiente</a>
+    </li>
+  </ul>
+</nav>

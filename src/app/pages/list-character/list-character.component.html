@@ -1,0 +1,12 @@
+<div class="p-5">
+    <h3>The Rick and Morty</h3>
+    <hr>
+    <div class="row">
+        <div class="col-3" *ngFor="let character of data">
+            <app-card [character]="character"></app-card>
+        </div>
+        <div>
+            <app-pagination (onPage)="onChangePage($event)"></app-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div *ngIf="character" class="center p-4 row justify-content-center">
+    <div class="card mb-4" style="width: 18rem;">
+        <img [src]="character.image" class="card-img-top" alt="...">
+        <div class="card-body" style="text-align: left;">
+          <h5 class="card-title">{{character.name}}</h5>
+          <span class="badge text-bg-success" *ngIf="character.status === 'Alive'">{{character.status}}</span>
+          <span class="badge text-bg-danger" *ngIf="character.status !== 'Alive'">{{character.status}}</span>
+          <p class="card-text"><b>Especie: </b>{{character.species}}</p>
+          <p class="card-text"><b>Genero: </b>{{character.gender}}</p>
+          <p class="card-text"><b>Origen: </b>{{character.origin.name}}</p>
+          <a (click)="gotohome()" class="btn btn-primary">Regresar</a>
+        </div>
+    </div>
+</div>
+<div *ngIf="!character">Espere un momento por favor ...</div>
